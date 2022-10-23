@@ -1,33 +1,18 @@
-import React from "react";
-import { Provider } from "react-redux";
+import React, { ReactElement } from 'react'
+import { Provider } from 'react-redux'
 
-import logo from "./logo.svg";
-import "./App.css";
-import createStore from "./redux/store/configureStore";
+import './App.css'
+import createStore from './redux/store/configureStore'
+import Home from './pages/home/Home'
 
-const store = createStore({});
+const store = createStore({})
 
-const App = () => {
+const App = (): ReactElement => {
   return (
     <Provider store={store}>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+    <Home />
     </Provider>
-  );
-};
+  )
+}
 
-export default App;
+export default App
