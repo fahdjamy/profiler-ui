@@ -14,7 +14,7 @@ export interface CardProps {
 const Card: React.FC<CardProps> = ({ text, icon, title, contentStyle, style, cardFooter, iconStyles, buttonComponent }: CardProps) => {
   return (
     <div className={style}>
-        <h1 className='text-2xl'>{title}</h1>
+        <h1 className='flex items-center text-left text-xl lg:text-center'>{title}</h1>
         <div className={contentStyle}>
         <p>{text}</p>
         <img className={iconStyles} src={icon} />
