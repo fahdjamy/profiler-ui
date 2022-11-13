@@ -8,10 +8,12 @@ export interface HeaderProps {
 const Navbar: React.FC<HeaderProps> = (props: HeaderProps): ReactElement => {
   return (
     <React.Fragment>
-        <div className="flex flex-row justify-between items-center h-20 px-[1rem] shadow-md">
+      <div className="flex items-center h-20 shadow-md body-font font-Nunito sticky top-0 z-30 bg-white ">
+        <div className="flex flex-row w-[100%] justify-between items-center h-[100%] mx-auto lg:w-[80%] xl:w-[60%] ">
             <div className="d-flex">{props.rightComponents}</div>
             <div className="w-[30%]">{props.leftComponents}</div>
         </div>
+      </div>
 </React.Fragment>
   )
 }

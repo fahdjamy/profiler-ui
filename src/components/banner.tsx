@@ -6,8 +6,8 @@ import bannerImage from '../assets/meeting.jpeg'
 const Banner: React.FC = () => {
   return (
         <Fragment>
-            <div className='flex flex-row w-[90%] justify-between mt-[2rem] mx-auto h-[80vh]'>
-                <div className='w-[48%] flex flex-col items-left px-[5px] h-[100%]'>
+            <div className='flex flex-col w-screen p-[1rem] justify-start mt-[1rem] space-y-2 mx-auto h-auto lg:w-[80%] md:flex-row justify-between xl:w-[60%]'>
+                <div className='flex flex-col w-[100%] px-0 md:w-[48%] items-left px-[5px] h-[100%]'>
                     <h2 className='text-3xl'>
                     Software Development and SaaS Product Management
                     </h2>
@@ -27,16 +27,16 @@ const Banner: React.FC = () => {
                     I 💓 to code and build 🔥 software solutions & products
                     </p>
                     </p>
-                    <div className='w-[100%] h-auto flex flex-row mt-[2rem] justify-start items-center]'>
-                    <Button dataTestId='action_btn' style='border w-[7rem]  rounded-md p-[5px]' >
+                    <div className='w-[100%] flex flex-col h-auto mt-[2rem] space-y-[1rem] justify-between md:justify-start md:flex-row md:space-y-[0]  items-center]'>
+                    <Button dataTestId='action_btn' style='border w-[100%] bg-[#005584]  rounded-md p-[5px] text-white md:w-[7rem]' >
                         Get started
                     </Button>
-                    <Button dataTestId='action_btn' style='border w-[7rem] ml-8 rounded-md p-[5px]' >
+                    <Button dataTestId='action_btn' style='border w-[100%] rounded-md p-[5px] md:ml-8 md:w-[7rem]' >
                         About Me
                     </Button>
                     </div>
                 </div>
-                <div className='w-[48%] h-[100%] flex flex-col'>
+                <div className='w-[100%] md:w-[48%] h-[100%] flex flex-col'>
                     <ImageComponent imageFile={bannerImage} />
                 </div>
             </div>

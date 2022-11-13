@@ -28,12 +28,12 @@ const WorkFlow: React.FC = () => {
   const heading = 'My Software & Product Development Process'
   const content = 'I will be your contact during the whole software development process.For projects, we can use your or our collaboration tools.'
   return (
-        <div className='flex flex-row w-[100%] bg-slate-500 justify-center mx-auto h-[50vh]'>
-            <div className='flex flex-col w-[90%]'>
-                <Card style=' flex flex-col space-y-4 w-2/4 mx-auto h-auto p-[2rem] items-center' title={heading} text={content} />
-                 <div className='flex justify-center grid grid-col-3 grid-flow-col gap-4 mt-[2rem]'>
+        <div className='flex flex-row w-[100%] bg-stone-100 justify-center mx-auto h-auto md:h-[50vh] lg:h-[50vh]'>
+            <div className='flex flex-col w-[100%] lg:w-[80%] xl:w-[60%] '>
+                <Card style=' flex flex-col space-y-4 w-[100%] text-center mx-auto h-auto p-[1rem] items-center lg:w-[60%] lg:p-[2rem]' title={heading} text={content} />
+                 <div className='flex justify-center grid grid-rows-4 grid-flow-cols gap-4 mt-[2rem] md:grid-cols-4 grid-flow-cols'>
                     {workFlow.map((item, index) => (
-                        <Card key={index} icon={item.icon} cardFooter={item.footer} style='flex items-center border justify-center p-[1rem] space-y-6' iconStyles='w-[80px] h-[80px] items-center border' />
+                        <Card key={index} icon={item.icon} cardFooter={item.footer} style='flex flex-col items-center justify-between p-[1rem] space-y-4' iconStyles='w-[80px] h-[80px] mx-auto' />
                     ))}
                  </div>
 

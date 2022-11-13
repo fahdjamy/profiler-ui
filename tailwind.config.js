@@ -1,22 +1,30 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
 module.exports = {
   content: [
-    './src/**/*.{js,jsx,ts,tsx}'
+    './src/**/*.{js,jsx,ts,tsx}',
+    './public/index.html',
   ],
   theme: {
-    colors: {
-      primary: 'blue',
-      secondary: 'red',
-      'text-base': 'white'
+    
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
     },
     extend: {
       fontFamily: {
-        Lato: ['Lato', 'Helvetica', 'sans-serif'],
         Montserrat: ['Montserrat', 'sans-serif'],
         Roboto: ['Roboto', 'sans-serif'],
         Nunito: ['Nunito', 'sans-serif'],
         body: ['Nunito']
-      }
+      },
+      colors: {
+        amber: colors.amber,
+        emerald: colors.emerald,
+      },
     }
   },
   plugins: []

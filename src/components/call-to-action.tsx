@@ -20,12 +20,12 @@ const CAT: React.FC = () => {
     }
   ]
   return (
-    <div className='flex flex-row w-[100%] bg-slate-500 justify-center mx-auto h-[50vh]'>
-         <div className='flex flex-col w-[90%]'>
-            <Card style=' flex flex-col space-y-4 w-2/4 mx-auto h-auto p-[2rem] items-center' title={heading} />
-            <div className='flex justify-center grid grid-col-2 grid-flow-col gap-4 mt-[2rem]'>
+    <div className='flex flex-row w-[100%] bg-[#3d3d3d] justify-center mx-auto h-auto py-[2rem] md:h-auto'>
+         <div className='flex flex-col w-[90%] items-center md:w-[60%]'>
+            <Card style=' flex flex-col space-y-4 w-[100%] mx-auto h-auto p-[2rem] text-center text-white items-center md:w-2/4' title={heading} />
+            <div className='flex justify-center grid grid-rows-2 grid-flow-rows  md:grid-cols-2 grid-flow-cols gap-4 mt-[2rem]'>
                     {actionFlow.map((item, index) => (
-                        <Card key={index} title={item.title} buttonComponent={item.button} text={item.text} style='flex flex-col items-center rounded-lg w-80 box-content shadow-2xl justify-center p-[1rem] space-y-6' />
+                        <Card key={index} title={item.title} buttonComponent={item.button} text={item.text} style='flex flex-col items-center rounded-lg w-80 bg-white box-content shadow-2xl justify-center p-[1rem] space-y-6' />
                     ))}
             </div>
          </div>
