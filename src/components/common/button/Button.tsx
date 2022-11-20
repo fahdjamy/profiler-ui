@@ -11,10 +11,10 @@ export interface ButtonProps {
   children?: undefined | string
 }
 
-const Button: React.FC<ButtonProps> = ({ title, dataTestId, children, isLoading, style, id, disabled }: ButtonProps) => {
+const Button: React.FC<ButtonProps> = ({ title, dataTestId, isLoading, style, id, disabled }: ButtonProps) => {
   return (
         <button className={style} id={id} data-testid={dataTestId} disabled={disabled} >
-            {children}
+            {title}
         </button>
   )
 }

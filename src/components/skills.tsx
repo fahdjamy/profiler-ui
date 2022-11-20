@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './common/cards/card'
+import Header from './common/header/Header'
 
 export interface ISkils {
   title: string
@@ -32,7 +33,7 @@ const Skills: React.FC = () => {
   return (
     <div className='flex flex-row w-[100%] h-auto justify-center mx-auto lg:min-h-[90vh] my-[2rem]'>
          <div className='flex flex-col w-[100%] md:w-[60%] justify-around'>
-         <Card style=' flex flex-col w-[100%] h-auto p-[1rem] text-center items-center lg:space-y-4 lg:w-[80%] mx-auto lg:p-[1rem]' title={heading} text={content} />
+         <Header styles=' flex flex-col w-[100%] h-auto p-[1rem] text-3xl text-center items-center lg:space-y-4 lg:w-[80%] mx-auto lg:p-[1rem]' title={heading} subHeading={content} />
          {
           techStack.map(({ title, stack }, index) => (
             <div key={index} className='flex flex-col justify-around w-[100%] mx-auto h-[100%] lg:w-[60%] px-[5px]'>
@@ -47,6 +48,9 @@ const Skills: React.FC = () => {
             </div>
           ))
          }
+         <div className='flex flex-row border rounded-3xl bg-gray-300 p-[8px] mx-auto items-center'>
+          <p className='text-xs font-bold'>WHERE I USED THIS SOFTWARE DEVELOPMENT SKILLS</p><span className='ml-[2rem]'>view full portfolio</span>
+         </div>
         </div>
     </div>
   )

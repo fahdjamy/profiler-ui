@@ -6,7 +6,13 @@ module.exports = {
     './public/index.html',
   ],
   theme: {
-    
+    fontFamily: {
+      Montserrat: ['Montserrat', 'sans-serif'],
+      // sans: ['Helvetica Neue', 'Arial', 'sans-serif'],
+      Roboto: ['Roboto', 'sans-serif'],
+      Nunito: ['Nunito', 'sans-serif'],
+      body: ['Nunito']
+      ,
     screens: {
       'sm': '640px',
       'md': '768px',
@@ -15,11 +21,11 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
-      fontFamily: {
-        Montserrat: ['Montserrat', 'sans-serif'],
-        Roboto: ['Roboto', 'sans-serif'],
-        Nunito: ['Nunito', 'sans-serif'],
-        body: ['Nunito']
+      // fontFamily: {
+      //   Montserrat: ['Montserrat', 'sans-serif'],
+      //   Roboto: ['Roboto', 'sans-serif'],
+      //   Nunito: ['Nunito', 'sans-serif'],
+      //   body: ['Nunito']
       },
       colors: {
         amber: colors.amber,

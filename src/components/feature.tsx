@@ -28,8 +28,8 @@ const Features: React.FC = () => {
 
   return (
         <Fragment>
-          <div className='flex flex-row w-screen h-auto justify-center mt-[1rem] mx-auto lg:min-h-[50vh] lg:mt-[4rem]'>
-            <div className='flex flex-col w-[100%] items-center p-[1rem] lg:w-[80%] xl:w-[60%] xl:space-y-6'>
+          <div className='flex flex-row w-[100%] h-auto justify-center mt-[1rem] mx-auto lg:min-h-[50vh] lg:mt-[4rem]'>
+            <div className='flex flex-col w-[100%] items-center p-[1rem] md:w-auto lg:w-[80%] xl:space-y-6 2xl:w-[60%]'>
               <Card style=' flex flex-col space-y-4 w-[100%] mx-auto h-auto p-[1rem] items-center text-center lg:w-[50%] lg:p[2rem]' title={hed} text={content} />
               <div className='flex grid grid-rows-1 grid-flow-rows gap-4 lg:grid-cols-2 grid-flow-cols xl:grid-cols-3 grid-flow-cols'>
                   {
