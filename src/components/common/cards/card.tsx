@@ -8,7 +8,7 @@ export interface CardProps {
   contentStyle?: undefined | string
   cardFooter?: undefined | string
   iconStyles?: undefined | string
-  buttonComponent?: undefined | ReactElement[] | ReactElement
+  buttonComponent?: undefined | ReactElement[] | ReactElement | null
 }
 
 const Card: React.FC<CardProps> = ({ text, icon, title, contentStyle, style, cardFooter, iconStyles, buttonComponent }: CardProps) => {

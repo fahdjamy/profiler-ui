@@ -9,16 +9,16 @@ import Testimonial from '../../components/testimonial'
 
 const Home: React.FC = (): ReactElement => {
   return (
-        <Layout>
-            <Fragment>
-            <Banner/>
-            <Features />
-            <WorkFlow />
-            <Skills />
-            <CAT />
-            <Testimonial/>
-            </Fragment>
-        </Layout>
+    <Layout>
+      <Fragment>
+        <Banner />
+        <Features />
+         <WorkFlow />
+        <Skills />
+        <CAT />
+        <Testimonial />
+      </Fragment>
+    </Layout>
   )
 }
 export default Home

@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps): ReactElement 
   return (
     <React.Fragment>
         <Navbar rightComponents={<Logo logo={LogoBlack} />} leftComponents={<Menu items={menuItems} />} />
-        <div className='min-h-[90vh] flex- flex-col body-font font-Montserrat'>
+        <div className='min-h-[90vh] flex- flex-col body-font p-[2px] font-Roboto text-[#303030]'>
             {children}
         </div>
         <Footer title='Footer' />

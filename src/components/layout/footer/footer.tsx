@@ -12,17 +12,17 @@ export interface FooterProps {
 
 const Footer: React.FC<FooterProps> = (): ReactElement => {
   return (
-    <div className='flex flex-row w-[100%] justify-center mx-auto space-x-6 h-auto bg-gray-300 body-font font-Montserrat md:h-[30vh]'>
-    <Container styles='flex flex-col w-[100%] p-[5px] md:flex-row w-[60%] md:p-[2rem]'>
-        <div className='w-[100%] md:w-auto'>
+    <div className='flex flex-row w-[100%] justify-center mx-auto space-x-6 h-auto bg-gray-300 body-font font-Roboto md:h-[30vh]'>
+    <Container styles='flex flex-col w-[100%] justify-center p-[5px] md:flex-row lg:w-[80%] 2xl:w-[60%] md:pt-[2rem]'>
+        <div className='w-[100%] flex justify-center md:w-auto'>
           {/* <Logo logo={LogoImage}/> */}
           <p>
           {'Copyright © '} profile uri {new Date().getFullYear()}{' '}
           </p>
         </div>
-        <div className='flex flex-col w-[100%] justify-between md:ml-[2rem] md:flex-row w-3/4 '>
+        <div className='flex flex-col w-[100%] mx-auto justify-between md:ml-[2rem] md:flex-row w-3/4'>
           {footerItems && footerItems.map(({ heading, items }, index) => (
-            <div className='w-[100%] flex flex-col px-[2px] items-center  md:w-2/4 md:px-[1rem]' key={index}>
+            <div className='w-[100%] flex flex-col px-[2px] md:w-2/4 md:px-[1rem] md:items-start' key={index}>
             <h2 className='text-xl space-y-6'>
               {heading}
             </h2>
@@ -34,7 +34,6 @@ const Footer: React.FC<FooterProps> = (): ReactElement => {
           ))}
         </div>
     </Container>
-
     </div>
   )
 }

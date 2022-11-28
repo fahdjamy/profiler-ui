@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './common/cards/card'
+import Header from './common/header/Header'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
 
@@ -27,9 +28,9 @@ const Testimonial: React.FC = () => {
     }
   ]
   return (
-        <div className='flex flex-row w-[100%] justify-center mx-auto h-[70vh]'>
+        <div className='flex flex-row w-[100%] justify-center mx-auto lg:h-[70vh]'>
         <div className='flex flex-col w-[90%]'>
-            <Card style=' flex flex-col space-y-4 w-[100%] mx-auto h-auto p-[10px] text-center items-center lg:w-2/4 lg:p-[2rem]' title={heading} />
+            <Header styles=' flex flex-col space-y-4 w-[100%] text-3xl mx-auto h-auto p-[10px] text-center items-center lg:w-2/4 lg:p-[2rem]' title={heading} />
             <Carousel showStatus={false} centerMode={true} showIndicators={false} showThumbs={false} autoPlay={true} infiniteLoop={true} className='w-[100%] h-[100%] mx-auto lg:w-[60%]'>
                 {
                   Testimonials.map((items, index) => (

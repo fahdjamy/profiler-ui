@@ -7,6 +7,17 @@
         "plugin:react/recommended",
         "standard-with-typescript"
     ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src"]
+      }
+    }
+  },
     "overrides": [
     ],
     "parserOptions": {
@@ -15,7 +26,7 @@
         "project": "./tsconfig.json"
     },
     "plugins": [
-        "react"
+        "react", "import"
     ],
     "rules": {
         "@typescript-eslint/prefer-optional-chain": "warn"
