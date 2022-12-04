@@ -1,21 +1,51 @@
-import React from 'react'
-import { useRoutes } from 'react-router-dom'
-import type { RouteObject } from 'react-router-dom'
+import React, { ReactElement } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Home from '../pages/home/Home'
-import About from '../pages/About'
+import { Home, About, Portifolio, Services, Contact, Blog } from '../pages'
+
+export interface IRoutes {
+  component: ReactElement | undefined
+  route: undefined | string
+}
 
 const AppRoute: React.FC = () => {
-  const route: RouteObject[] = [
+  const appRoute: IRoutes[] = [
     {
-      path: '/',
-      element: <Home />
+      component: <Home />,
+      route: '/'
     },
     {
-      path: '/about',
-      element: <About />
+      component: <About/>,
+      route: '/about'
+    },
+    {
+      component: <Portifolio/>,
+      route: '/portfolio'
+    },
+    {
+      component: <Blog />,
+      route: '/blog'
+    },
+    {
+      component: <Contact />,
+      route: '/contact'
+    },
+    {
+      component: <Services />,
+      route: '/services'
     }
+
   ]
-  return useRoutes(route)
+  return (
+    <BrowserRouter>
+      <Routes>
+        {
+          appRoute.map((elments, index) => (
+            <Route key={index} path={elments.route} element={elments.component} />
+          ))
+        }
+      </Routes>
+    </BrowserRouter>
+  )
 }
 export default AppRoute

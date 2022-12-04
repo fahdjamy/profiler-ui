@@ -1,4 +1,5 @@
-import React from 'react'
+import Layout from '../../components/Layout'
+import React, { Fragment } from 'react'
 
 export interface AboutProps {
   data: undefined | string
@@ -6,9 +7,13 @@ export interface AboutProps {
 
 const About: React.FC = () => {
   return (
-        <div>
+    <Layout>
+      <Fragment>
+          <div>
             <h1>About me</h1>
-        </div>
+          </div>
+      </Fragment>
+    </Layout>
   )
 }
 

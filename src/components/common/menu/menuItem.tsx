@@ -1,15 +1,19 @@
 export const menuItems = [
   {
-    name: 'About',
-    route: '/about'
+    name: 'Services',
+    route: '/services'
   },
   {
     name: 'Portifolio',
     route: '/portfolio'
   },
   {
-    name: 'Services',
-    route: '/services'
+    name: 'About me',
+    route: '/about'
+  },
+  {
+    name: 'Contact',
+    route: '/contact'
   },
   {
     name: 'Blog',

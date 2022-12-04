@@ -11,8 +11,7 @@ const store = createStore({})
 const App = (): ReactElement => {
   return (
     <Provider store={store}>
-    <Home />
-    {/* <AppRoute /> */}
+     <Home />
     </Provider>
   )
 }

@@ -11,18 +11,18 @@ const Banner: React.FC = () => {
                     <h1 className='text-2xl lg:text-5xl font-black space-y-8 h-auto'>
                     Software Development and SaaS Product Management
                     </h1>
-                    <p className='mt-[2rem]'>
+                    <p className='mt-[2rem] text-sm'>
                     With 20+ years of software development and
                     SaaS product management experience, I speak technology and business.
 
-                    <p className='mt-[2rem]'>
+                    <p className='mt-[2rem] text-sm'>
                     I provide First Principles-based solutions for your company.
                     </p>
-                    <p className='mt-[2rem]'>
+                    <p className='mt-[2rem] text-sm'>
 
                     My team of developers and I build custom software solutions for small businesses, individuals or startups.
                     </p>
-                    <p className='mt-[2rem]'>
+                    <p className='mt-[2rem] text-sm'>
 
                     I 💓 to code and build 🔥 software solutions & products
                     </p>
