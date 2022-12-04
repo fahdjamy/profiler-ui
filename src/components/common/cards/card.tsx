@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/restrict-plus-operands */
 import React, { ReactElement } from 'react'
 
 export interface CardProps {
@@ -8,13 +9,14 @@ export interface CardProps {
   contentStyle?: undefined | string
   cardFooter?: undefined | string
   iconStyles?: undefined | string
+  titleStyle?: undefined | string
   buttonComponent?: undefined | ReactElement[] | ReactElement | null
 }
 
-const Card: React.FC<CardProps> = ({ text, icon, title, contentStyle, style, cardFooter, iconStyles, buttonComponent }: CardProps) => {
+const Card: React.FC<CardProps> = ({ text, icon, title, contentStyle, titleStyle, style, cardFooter, iconStyles, buttonComponent }: CardProps) => {
   return (
     <div className={style}>
-        <h1 className='flex items-center text-left text-xl lg:text-center'>{title}</h1>
+        <h1 className={titleStyle}>{title}</h1>
         <div className={contentStyle}>
         <p>{text}</p>
         <img className={iconStyles} src={icon} />
