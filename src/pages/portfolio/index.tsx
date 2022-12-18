@@ -1,13 +1,14 @@
 import Layout from '../../components/Layout'
 import React, { Fragment } from 'react'
+import { Customer, ClientTable, PortfolioCTA } from '../../components/portfolioComponents'
 
 const Portfolio: React.FC = () => {
   return (
     <Layout>
       <Fragment>
-        <div>
-          <h1> This is my Portfolio</h1>
-        </div>
+        <Customer />
+        <ClientTable />
+        <PortfolioCTA />
       </Fragment>
     </Layout>
   )
