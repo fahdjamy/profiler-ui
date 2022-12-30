@@ -1,5 +1,6 @@
 import Layout from '../../components/Layout'
 import React, { Fragment } from 'react'
+import { BioCard } from '../../components/aboutComponents'
 
 export interface AboutProps {
   data: undefined | string
@@ -10,7 +11,7 @@ const About: React.FC = () => {
     <Layout>
       <Fragment>
           <div>
-            <h1>About me</h1>
+            <BioCard />
           </div>
       </Fragment>
     </Layout>
