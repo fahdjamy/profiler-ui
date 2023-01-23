@@ -17,14 +17,14 @@ const Contact: React.FC = () => {
                 </div>
          </div>
             <div className='flex flex-col md:flex-row
-             border mx-auto w-[100%] items-center p-[1rem]
-              md:w-auto lg:w-[65%] xl:space-y-6 2xl:w-[60%]'>
-            <div className='w-[40%] flex flex-col'>
-              <Header title={Heading} styles='text-2xl font-bold w-[100%] text-left' />
+            mx-auto w-[90%] items-center p-[1rem]
+              md:w-auto lg:w-[65%] xl:space-y-6 2xl:w-[60%] shadow-lg mb-[2rem]'>
+            <div className='w-[100%] md:w-[40%] flex flex-col'>
+              <Header title={Heading} styles='text-2xl font-bold w-[100%] text-center md:text-left' />
               <p className='text-sm'>Write me shortly about where I can help you and your company.</p>
-                <p className='text-sm mt-[10px]'>I will ping you back very soon.</p>
+              <p className='text-sm mt-[10px]'>I will ping you back very soon.</p>
             </div>
-            <div className='w-[60%]'>
+            <div className='w-[100%] md:w-[60%]'>
             <ContactForm />
             </div>
             </div>
