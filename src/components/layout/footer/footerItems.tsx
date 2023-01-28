@@ -47,3 +47,21 @@ export const footerItems = [
     ]
   }
 ]
+
+export const socials = [
+  {
+    name: 'T',
+    path: 'https://twitter.com/',
+    icon: ''
+  },
+  {
+    name: 'l',
+    path: 'https://linkedin.com/',
+    icon: ''
+  },
+  {
+    name: 'T',
+    path: 'https://linkedin.com/',
+    icon: ''
+  }
+]

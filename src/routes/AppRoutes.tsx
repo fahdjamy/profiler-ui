@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { Home, About, Portifolio, Services, Contact, Blog } from '../pages'
+import { Home, About, Portifolio, Services, Contact, Blog, SingleBlogPage } from '../pages'
 
 export interface IRoutes {
   component: ReactElement | undefined
@@ -33,6 +33,10 @@ const AppRoute: React.FC = () => {
     {
       component: <Services />,
       route: '/services'
+    },
+    {
+      component: <SingleBlogPage />,
+      route: '/blog/:id'
     }
 
   ]
@@ -40,8 +44,8 @@ const AppRoute: React.FC = () => {
     <BrowserRouter>
       <Routes>
         {
-          appRoute.map((elments, index) => (
-            <Route key={index} path={elments.route} element={elments.component} />
+          appRoute.map(({ route, component }) => (
+            <Route key={route} path={route} element={component} />
           ))
         }
       </Routes>
