@@ -3,7 +3,8 @@
 import React, { ReactElement } from 'react'
 import Container from '../../common/container/container'
 // import Logo from '../../common/logo/logo'
-import { footerItems } from './footerItems'
+import { footerItems, socials } from './footerItems'
+import { Link } from 'react-router-dom'
 // import LogoImage from '../../../assets/vrarts-logo.png'
 
 export interface FooterProps {
@@ -12,8 +13,8 @@ export interface FooterProps {
 
 const Footer: React.FC<FooterProps> = (): ReactElement => {
   return (
-    <div className='flex flex-row w-[100%] justify-center mx-auto space-x-6 h-auto bg-gray-300 body-font font-Roboto md:h-[30vh]'>
-    <Container styles='flex flex-col w-[100%] justify-center p-[5px] md:flex-row lg:w-[80%] 2xl:w-[60%] md:pt-[2rem]'>
+    <div className='flex flex-col w-[100%] justify-center items-center mx-auto space-x-6 h-auto bg-[#e8e8e8] body-font font-Roboto md:h-[50vh]'>
+    <Container styles='flex flex-col w-[100%] justify-center mx-auto p-[5px] md:flex-row lg:w-[80%] 2xl:w-[60%] md:pt-[2rem]'>
         <div className='w-[100%] flex justify-center md:w-auto'>
           {/* <Logo logo={LogoImage}/> */}
           <p className='text-sm text-[#303030]'>
@@ -22,8 +23,8 @@ const Footer: React.FC<FooterProps> = (): ReactElement => {
         </div>
         <div className='flex flex-col w-[100%] mx-auto justify-between md:ml-[2rem] md:flex-row w-3/4'>
           {footerItems && footerItems.map(({ heading, items }, index) => (
-            <div className='w-[100%] flex flex-col px-[2px] md:w-2/4 md:px-[1rem] md:items-start' key={index}>
-            <h2 className='text-[18px] text-[#303030]  space-y-6 font-semibold'>
+            <div className='w-[100%] flex flex-col px-[2px] md:w-2/4 md:px-[0.5rem] md:items-start' key={index}>
+            <h2 className='text-[18px] text-[#303030]  space-y-6 font-bold'>
               {heading}
             </h2>
             <nav className='mt-[1rem] '>
@@ -33,7 +34,17 @@ const Footer: React.FC<FooterProps> = (): ReactElement => {
             </div>
           ))}
         </div>
+        <div className='w-auto flex flex-row'>{
+          socials.map((item, index) => (
+            <Link key={index} to={item.path}>
+            <p className='p-[2px]'>{item.name}</p>
+            </Link>
+          ))
+          }
+        </div>
     </Container>
+   <hr className='border-gray-300 bg-gray-300 mt-[2rem]  mx-auto h-[1px] w-[80%]' />
+   <div className='mt-[2rem] text-[12px] p-[4px] text-[#303030]'>privacy policy</div>
     </div>
   )
 }
