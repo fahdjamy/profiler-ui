@@ -16,19 +16,19 @@ const Footer: React.FC<FooterProps> = (): ReactElement => {
     <Container styles='flex flex-col w-[100%] justify-center p-[5px] md:flex-row lg:w-[80%] 2xl:w-[60%] md:pt-[2rem]'>
         <div className='w-[100%] flex justify-center md:w-auto'>
           {/* <Logo logo={LogoImage}/> */}
-          <p>
+          <p className='text-sm text-[#303030]'>
           {'Copyright © '} profile uri {new Date().getFullYear()}{' '}
           </p>
         </div>
         <div className='flex flex-col w-[100%] mx-auto justify-between md:ml-[2rem] md:flex-row w-3/4'>
           {footerItems && footerItems.map(({ heading, items }, index) => (
             <div className='w-[100%] flex flex-col px-[2px] md:w-2/4 md:px-[1rem] md:items-start' key={index}>
-            <h2 className='text-xl space-y-6'>
+            <h2 className='text-[18px] text-[#303030]  space-y-6 font-semibold'>
               {heading}
             </h2>
-            <nav>
+            <nav className='mt-[1rem] '>
               {items.map(({ label }, index) =>
-                (<p key={index}>{label}</p>))}
+                (<p className='text-sm p-[4px] text-[#303030]' key={index}>{label}</p>))}
             </nav>
             </div>
           ))}

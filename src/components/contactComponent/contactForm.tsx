@@ -1,6 +1,7 @@
 import React from 'react'
-import { Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
+import { Formik, Form, Field } from 'formik'
+import FormWrapper from '../common/forms/formWrapper'
 
 export interface validationProps {
   value?: string | null | undefined
@@ -31,8 +32,8 @@ const ContactForm: React.FC = () => {
     >
       {({ errors, touched }) => (
          <Form className='flex flex-col p-[0.5rem] items-center'>
-          <div className='flex flex-row w-[100%] justify-between'>
-          <div className='flex flex-col w-[45%]'>
+          <div className='flex flex-col w-[100%] md:flex-row justify-between'>
+          <FormWrapper>
             <label htmlFor="name" className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>Name</label>
             <Field name="name" type="text" className='block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500' />
              {(errors.name !== undefined && errors.name !== null) &&
@@ -41,8 +42,8 @@ const ContactForm: React.FC = () => {
              <div>{errors.name}</div>
                  )
                : null}
-          </div>
-          <div className='flex flex-col w-[45%]'>
+          </FormWrapper>
+          <FormWrapper>
             <label htmlFor="email" className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>Email</label>
             <Field name="email" type="email" className='block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500' />
                   {(errors.email !== undefined && errors.email !== null) &&
@@ -51,7 +52,7 @@ const ContactForm: React.FC = () => {
              <div>{errors.email}</div>
                       )
                     : null}
-          </div>
+          </FormWrapper>
           </div>
           <div className='flex flex-col w-[100%]'>
             <label htmlFor="message" className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>Message</label>
@@ -63,7 +64,7 @@ const ContactForm: React.FC = () => {
                       )
                     : null}
           </div>
-          <button type="submit" className='border bg-blue-700 p-[8px] rounded-[5px] mt-[2rem] text-white'>Get in touch</button>
+          <button type="submit" className='w-[100%] md:w-auto mx-auto border bg-blue-700 p-[8px] rounded-[5px] mt-[2rem] text-white'>Get in touch</button>
         </Form>
       )}
     </Formik>
