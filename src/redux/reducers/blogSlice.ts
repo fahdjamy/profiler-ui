@@ -1,50 +1,48 @@
-/* eslint-disable @typescript-eslint/consistent-type-assertions */
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { BlogPosts, IBlog } from '../../mockS/mockBlogData'
 
-export interface IBlog {
-  title: string
-  description: string
-  image: string
-  content: string
+interface BlogState {
+  blogs: IBlog[]
+  loading: boolean
+  error: string | null
 }
 
-export interface blogState {
-  loading: 'PENDING' | 'FULFILLED'
-  error: unknown
-  blog: IBlog | null
+const initialState: BlogState = {
+  blogs: [],
+  loading: false,
+  error: null
 }
-
-const initialState = {
-  loading: 'PENDING',
-  error: null,
-  blog: null
-} as blogState
-const namespace = 'fetchBlogs'
-
-export const fetchBlogs = createAsyncThunk(
-    `${namespace}/blogs`,
-    async (credentials: Credential, {
-      rejectWithValue
-    }) => {
-      try {
-        const response = await fetch('blogs/all')
-        return await response.json()
-      } catch (error) {
-        rejectWithValue(error)
-      }
-    }
-)
 
 const blogSlice = createSlice({
-  name: `${namespace}`,
+  name: 'blogs',
   initialState,
   reducers: {
-    setBlog: (state, { payload }) => {
-      state.blog = payload
+    setBlogs: (state, action: PayloadAction<IBlog[]>) => {
+      state.blogs = action.payload
+      state.loading = false
+      state.error = null
+    },
+    setLoading: (state) => {
+      state.loading = true
+      state.error = null
+    },
+    setError: (state, action: PayloadAction<string>) => {
+      state.loading = false
+      state.error = action.payload
     }
   }
 })
 
-export const { setBlog } = blogSlice.actions
+export const { setBlogs, setLoading, setError } = blogSlice.actions
+
+export const fetchBlogPosts = () => async (dispatch: any) => {
+  try {
+    dispatch(setLoading())
+    const blogPosts = BlogPosts
+    dispatch(setBlogs(blogPosts))
+  } catch (error) {
+    dispatch(setError('Error fetching blog posts'))
+  }
+}
 
 export default blogSlice.reducer

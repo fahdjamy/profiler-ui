@@ -31,10 +31,10 @@ const BioCard: React.FC = () => {
           mx-auto lg:p-[1rem]' title={heading} subHeading={content} />
           <div className='shadow-lg w-[100%] lg:w-[80%]
            mx-auto md:min-h-[60vh]  flex flex-col md:flex-row p-[2px] rounded-md'>
-            <div className='w-[100%] md:w-[30%] flex items-center'>
+            <div className='w-[100%] md:w-[40%] flex items-center'>
               <ImageComponent imageFile={ProfileImage} style='w-[100%] h-[100%]' />
             </div>
-            <div className='w-[100%] md:w-[70%] border flex items-left p-0 md:p-[2rem] flex-col'>
+            <div className='w-[100%] md:w-[70%] flex items-left p-0 md:p-[2rem] flex-col'>
               <Header styles='text-xl font-bold' title={Experience} />
                 <div className='w-[100%] space-y-4'>
                   {

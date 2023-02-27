@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './common/cards/card'
+import { Link } from 'react-router-dom'
 import Header from './common/header/Header'
 
 export interface ISkils {
@@ -8,6 +9,8 @@ export interface ISkils {
 }
 
 const Skills: React.FC = () => {
+  const route = '/portfolio'
+
   const techStack: ISkils[] = [
     {
       title: 'PROGRAMMING LANGUAGES',
@@ -48,8 +51,8 @@ const Skills: React.FC = () => {
             </div>
           ))
          }
-         <div className='flex flex-row border rounded-3xl bg-gray-300 p-[8px] mx-auto items-center'>
-          <p className='text-xs font-bold'>WHERE I USED THIS SOFTWARE DEVELOPMENT SKILLS</p><span className='ml-[2rem]'>view full portfolio</span>
+         <div className='flex flex-col justify-center md:flex-row border rounded-3xl bg-gray-300 p-[8px] mx-auto items-center'>
+          <p className='text-xs font-normal md:font-bold'>WHERE I USED THIS SOFTWARE DEVELOPMENT SKILLS</p><Link to={route} className='ml-0 md:ml-[2rem]'>view full portfolio</Link>
          </div>
         </div>
     </div>
