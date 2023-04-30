@@ -1,7 +1,8 @@
 import React, { ReactElement } from 'react'
 
 import './App.css'
-import Home from './pages/home/Home'
+import Home from './pages/ui-revamp/home'
+// import Home from './pages/home/Home'
 // import AppRoute from './routes/AppRoutes'
 
 const App = (): ReactElement => {

@@ -1,3 +1,4 @@
+import { faTwitter, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
 export const footerItems = [
   {
     heading: 'Profile Uri',
@@ -50,17 +51,17 @@ export const footerItems = [
 
 export const socials = [
   {
-    name: 'T',
+    name: faTwitter,
     path: 'https://twitter.com/',
     icon: ''
   },
   {
-    name: 'l',
+    name: faGithub,
     path: 'https://linkedin.com/',
     icon: ''
   },
   {
-    name: 'T',
+    name: faInstagram,
     path: 'https://linkedin.com/',
     icon: ''
   }

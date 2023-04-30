@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import * as Yup from 'yup'
 import { Formik, Field } from 'formik'
@@ -16,10 +16,29 @@ const validateEmail = Yup.object().shape({
   email: Yup.string().email('Invalid email address').required('Email is required')
 })
 const Navbar: React.FC<HeaderProps> = (props: HeaderProps): ReactElement => {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = (): void => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   const location = useLocation()
+  const navbarClasses = `flex items-center h-20 body-font font-Nunito sticky top-0 z-30 bg-white ${
+    isScrolled ? 'shadow-md' : ''
+  }`
   return (
     <React.Fragment>
-      <div className="flex items-center h-20 shadow-md body-font font-Nunito sticky top-0 z-30 bg-white ">
+      <div className={navbarClasses}>
         <div className="flex flex-row w-[100%] justify-between items-center h-[100%] mx-auto lg:w-[90%] 2xl:w-[70%]">
             <div className="d-flex ">{props.rightComponents}</div>
             <div className="w-[40%] text-sm font-semibold">{props.leftComponents}</div>
