@@ -20,13 +20,6 @@ module.exports = {
         xl: "1280px",
         "2xl": "1536px",
       },
-      extend: {
-        // fontFamily: {
-        //   Montserrat: ['Montserrat', 'sans-serif'],
-        //   Roboto: ['Roboto', 'sans-serif'],
-        //   Nunito: ['Nunito', 'sans-serif'],
-        //   body: ['Nunito']
-      },
       colors: {
         amber: colors.amber,
         emerald: colors.emerald,

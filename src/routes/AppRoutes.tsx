@@ -1,7 +1,9 @@
 import React, { ReactElement } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { Home, About, Portifolio, Services, Contact, Blog, SingleBlogPage } from '../pages'
+import { About, Portifolio, Services, Contact, Blog, SingleBlogPage } from '../pages'
+
+import Home from '../pages/ui-revamp/home'
 
 export interface IRoutes {
   component: ReactElement | undefined

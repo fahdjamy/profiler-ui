@@ -2,15 +2,20 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import AppRoute from './routes/AppRoutes'
 import './index.css'
-// import App from './App'
+import createStore from './redux/store/configureStore'
+import { Provider } from 'react-redux'
 import reportWebVitals from './reportWebVitals'
+
+const store = createStore({})
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 )
 root.render(
   <React.StrictMode>
+     <Provider store={store}>
     <AppRoute />
+     </Provider>
   </React.StrictMode>
 )
 
